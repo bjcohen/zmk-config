@@ -62,7 +62,7 @@ ZMK_HOLD_TAP(hmr,
             #binding-cells = <1>;
             display-name = "Toggle Layer On";
             toggle-mode = "on";
-        }
+        };
     };
 
     keymap {
