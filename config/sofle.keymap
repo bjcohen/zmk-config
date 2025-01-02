@@ -14,7 +14,7 @@
 #include "zmk-helpers/key-labels/sofle.h"
 
 #define QWERTY 0
-#default GALLIUM 1
+#define GALLIUM 1
 #define LOWER 2
 #define RAISE 3
 #define ADJUST 4
