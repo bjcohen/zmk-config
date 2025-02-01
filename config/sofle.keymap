@@ -13,8 +13,8 @@
 #include "zmk-helpers/helper.h"
 #include "zmk-helpers/key-labels/sofle.h"
 
-#define QWERTY 0
-#define GALLIUM 1
+#define GALLIUM 0
+#define QWERTY 1
 #define LOWER 2
 #define RAISE 3
 #define ADJUST 4
@@ -81,25 +81,6 @@ ZMK_HOLD_TAP(hmr,
     keymap {
         compatible = "zmk,keymap";
 
-        qwerty_layer {
-            display-name = "qwerty";
-// ------------------------------------------------------------------------------------------------------------
-// |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   | BSLH  |
-// |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | BKSPC |
-// |  ESC  |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
-// | SHIFT |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |       |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-//               | CTRL| ALT  | GUI  | LOWER|  ENTER |  | SPACE | RAISE| GUI   | ALT   | CTRL |
-            bindings = <
-&kp GRAVE &kp N1       &kp N2      &kp N3      &kp N4       &kp N5                           &kp N6     &kp N7       &kp N8      &kp N9      &kp N0          &kp BSLH
-&kp TAB   &kp Q        &kp W       &kp E       &kp R        &kp T                            &kp Y      &kp U        &kp I       &kp O       &kp P           &kp BSPC
-&kp ESC   &hml LCTRL A &hml LALT S &hml LGUI D &hml LSHFT F &kp G                            &kp H      &hmr RSHFT J &hmr RGUI K &hmr LALT L &hmr RCTRL SEMI &kp SQT
-&kp LSHFT &kp Z        &kp X       &kp C       &kp V        &kp B      &kp C_MUTE &none      &kp N      &kp M        &kp COMMA   &kp DOT     &kp FSLH        &kp RSHFT
-                       &kp LCTRL   &kp LALT    &kp LGUI     &mo LOWER  &kp RET    &kp SPACE  &mo RAISE  &kp RGUI     &kp LALT    &kp RCTRL
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-        };
-
         gallium_layer {
             display-name = "gallium";
 // ------------------------------------------------------------------------------------------------------------
@@ -114,6 +95,25 @@ ZMK_HOLD_TAP(hmr,
 &kp ESC   &hml LCTRL N &hml LALT R &hml LGUI T &hml LSHFT S &kp G                            &kp P  &hmr RSHFT H &hmr RGUI A &hmr LALT E &hmr RCTRL I &kp FSLH
 &kp LSHFT &kp X        &kp Q       &kp M       &kp W        &kp Z      &kp C_MUTE &none      &kp K  &kp F        &kp SQT     &kp SEMI    &kp DOT      &kp RSHFT
                        &kp LCTRL   &kp LALT    &kp LGUI     &mo LOWER  &kp RET    &kp SPACE  &mo RAISE  &kp RGUI &kp LALT    &kp RCTRL
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+        };
+
+        qwerty_layer {
+            display-name = "qwerty";
+// ------------------------------------------------------------------------------------------------------------
+// |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   | BSLH  |
+// |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | BKSPC |
+// |  ESC  |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
+// | SHIFT |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |       |  N   |  M    |  ,    |  .   |   /   | SHIFT |
+//               | CTRL| ALT  | GUI  | LOWER|  ENTER |  | SPACE | RAISE| GUI   | ALT   | CTRL |
+            bindings = <
+&kp GRAVE &kp N1       &kp N2      &kp N3      &kp N4       &kp N5                           &kp N6     &kp N7       &kp N8      &kp N9      &kp N0          &kp BSLH
+&kp TAB   &kp Q        &kp W       &kp E       &kp R        &kp T                            &kp Y      &kp U        &kp I       &kp O       &kp P           &kp BSPC
+&kp ESC   &hml LCTRL A &hml LALT S &hml LGUI D &hml LSHFT F &kp G                            &kp H      &hmr RSHFT J &hmr RGUI K &hmr LALT L &hmr RCTRL SEMI &kp SQT
+&kp LSHFT &kp Z        &kp X       &kp C       &kp V        &kp B      &kp C_MUTE &none      &kp N      &kp M        &kp COMMA   &kp DOT     &kp FSLH        &kp RSHFT
+                       &kp LCTRL   &kp LALT    &kp LGUI     &mo LOWER  &kp RET    &kp SPACE  &mo RAISE  &kp RGUI     &kp LALT    &kp RCTRL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -170,7 +170,7 @@ ZMK_HOLD_TAP(hmr,
 &bt BT_CLR        &bt BT_SEL 0    &bt BT_SEL 1     &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                            &none &none &none &none &none &none
 &ext_power EP_TOG &rgb_ug RGB_HUD &rgb_ug RGB_HUI  &rgb_ug RGB_SAD &rgb_ug RGB_SAI &rgb_ug RGB_EFF                         &none &none &none &none &none &none
 &none             &rgb_ug RGB_BRD &rgb_ug RGB_BRI  &none           &none           &none                                   &none &kp K_VOL_DN &kp K_MUTE &kp K_VOL_UP &none &none
-&none             &none           &tog_off GALLIUM &tog_on GALLIUM &none           &none            &rgb_ug RGB_TOG &none  &none &kp K_PREV &kp K_PP &kp K_NEXT &none &none
+&none             &none           &tog_on QWERTY   &tog_off QWERTY &none           &none            &rgb_ug RGB_TOG &none  &none &kp K_PREV &kp K_PP &kp K_NEXT &none &none
                                   &none            &none           &none           &none            &none           &none  &none &none &none &none
             >;
         };
