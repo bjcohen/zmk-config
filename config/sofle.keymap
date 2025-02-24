@@ -34,7 +34,6 @@ ZMK_HOLD_TAP(hml,
     require-prior-idle-ms = <150>;
     bindings = <&kp>, <&kp>;
     hold-trigger-key-positions = <KEYS_R THUMBS>;
-    hold-trigger-on-release;             // delay positional check until key-release
 )
 
 /* right-hand HRMs */
@@ -45,7 +44,6 @@ ZMK_HOLD_TAP(hmr,
     require-prior-idle-ms = <150>;
     bindings = <&kp>, <&kp>;
     hold-trigger-key-positions = <KEYS_L THUMBS>;
-    hold-trigger-on-release;             // delay positional check until key-release
 )
 
 / {
