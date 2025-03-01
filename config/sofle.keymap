@@ -24,6 +24,9 @@
 #define THUMBS LH4 LH3 LH2 LH1 LH0 RH0 RH1 RH2 RH3 RH4
 
 #define MCTL (ZMK_HID_USAGE(HID_USAGE_CONSUMER, 0xc1))
+#define SPOT (ZMK_HID_USAGE(HID_USAGE_CONSUMER, 0x221))
+#define DICT (ZMK_HID_USAGE(HID_USAGE_CONSUMER, 0xcf))
+#define DND (ZMK_HID_USAGE(HID_USAGE_CONSUMER, 0x9b))
 
 
 /* left-hand HRMs */
@@ -159,14 +162,14 @@ ZMK_HOLD_TAP(hmr,
         adjust_layer {
 // ----------------------------------------------------------------------------------------------------------------------------
 // | BTCLR  |  BT1    |  BT2    |   BT3   |   BT4   |   BT5   |                  |      |      |       |      |       |       |
-// | EXTPWR | RGB_HUD | RGB_HUI | RGB_SAD | RGB_SAI | RGB_EFF |                  |      | BRID | BRIU  | MCTL |       |       |
+// | EXTPWR | RGB_HUD | RGB_HUI | RGB_SAD | RGB_SAI | RGB_EFF |                  | BRID | BRIU  | MCTL | SPOT | DICT  |  DND  |
 // |        | RGB_BRD | RGB_BRI |         |         |         |                  |      | VOLDO| MUTE  | VOLUP|       |       |
 // |        |         | QWERTY  | GALLIUM |         |         | RGB_TOG | |      |      | PREV | PLAY  | NEXT |       |       |
 //                    |         |         |         |         |         | |      |      |      |       |      |
             display-name = "adjust";
             bindings = <
 &bt BT_CLR        &bt BT_SEL 0    &bt BT_SEL 1     &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                            &none &none        &none        &none        &none &none
-&ext_power EP_TOG &rgb_ug RGB_HUD &rgb_ug RGB_HUI  &rgb_ug RGB_SAD &rgb_ug RGB_SAI &rgb_ug RGB_EFF                         &none &kp C_BRI_DN &kp C_BRI_UP &kp MCTL     &none &none
+&ext_power EP_TOG &rgb_ug RGB_HUD &rgb_ug RGB_HUI  &rgb_ug RGB_SAD &rgb_ug RGB_SAI &rgb_ug RGB_EFF                         &kp C_BRI_DN &kp C_BRI_UP &kp MCTL &kp SPOT &kp DICT &kp DND
 &none             &rgb_ug RGB_BRD &rgb_ug RGB_BRI  &none           &none           &none                                   &none &kp K_VOL_DN &kp K_MUTE   &kp K_VOL_UP &none &none
 &none             &none           &tog_on QWERTY   &tog_off QWERTY &none           &none            &rgb_ug RGB_TOG &none  &none &kp C_PREV   &kp C_PP     &kp C_NEXT   &none &none
                                   &none            &none           &none           &none            &none           &none  &none &none        &none        &none
