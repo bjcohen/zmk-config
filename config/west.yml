@@ -6,8 +6,8 @@ manifest:
       url-base: https://github.com/mctechnology17
     - name: urob
       url-base: https://github.com/urob
-    - name: badjeff
-      url-base: https://github.com/badjeff
+    - name: petejohanson
+      url-base: https://github.com/petejohanson
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -20,7 +20,7 @@ manifest:
       remote: urob
       revision: main
     - name: cirque-input-module
-      remote: badjeff
+      remote: petejohanson
       revision: main
   self:
     path: config
