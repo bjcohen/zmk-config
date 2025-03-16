@@ -43,11 +43,11 @@
 };
 
 &i2c0 {
-    status = "disabled";
+    status = "okay";
     glidepoint0: glidepoint@2a {
         compatible = "cirque,pinnacle";
         reg = <0x2a>;
-        status = "disabled";
+        status = "okay";
         dr-gpios = <&gpio1 2 (GPIO_ACTIVE_HIGH)>;
 
         sensitivity = "1x";

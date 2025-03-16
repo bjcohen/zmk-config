@@ -1,0 +1,18 @@
+&i2c0 {
+    status = "okay";
+    glidepoint0: glidepoint@2a {
+        status = "okay";
+    };
+};
+
+/ {
+    glidepoint1: virtual_input {
+        compatible = "zmk,virtual-input";
+    };
+
+    input_relay_config_102 {
+        compatible = "zmk,split-peripheral-input-relay";
+        device = <&glidepoint0>;
+        relay-channel = <102>;
+    };
+};
