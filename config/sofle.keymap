@@ -162,7 +162,7 @@ ZMK_HOLD_TAP(hmr,
         adjust_layer {
 // ----------------------------------------------------------------------------------------------------------------------------
 // | BTCLR  |  BT1    |  BT2    |   BT3   |   BT4   |   BT5   |                  |      |      |       |      |       |       |
-// | EXTPWR | RGB_HUD | RGB_HUI | RGB_SAD | RGB_SAI | RGB_EFF |                  | BRID | BRIU  | MCTL | SPOT | DICT  |  DND  |
+// | EXTPWR | RGB_HUD | RGB_HUI | RGB_SAD | RGB_SAI | RGB_EFF |                  | BRID | BRIU | MCTL  | SPOT | DICT  |  DND  |
 // |        | RGB_BRD | RGB_BRI |         |         |         |                  |      | VOLDO| MUTE  | VOLUP|       |       |
 // |        |         | QWERTY  | GALLIUM |         |         | RGB_TOG | |      |      | PREV | PLAY  | NEXT |       |       |
 //                    |         |         |         |         |         | |      |      |      |       |      |
