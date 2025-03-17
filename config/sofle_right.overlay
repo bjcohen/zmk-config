@@ -1,3 +1,5 @@
+#include <dt-bindings/zmk/input_transform.h>
+
 #include "sofle.dtsi"
 
 &i2c0 {
