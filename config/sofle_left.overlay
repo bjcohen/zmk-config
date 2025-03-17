@@ -1,3 +1,5 @@
+#include "sofle.dtsi"
+
 / {
     glidepoint1: virtual_input {
         compatible = "zmk,virtual-input";
