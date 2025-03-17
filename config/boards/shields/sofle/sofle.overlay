@@ -34,7 +34,7 @@
         compatible = "cirque,pinnacle";
         reg = <0x2a>;
         status = "disabled";
-        dr-gpios = <&gpio0 22 (GPIO_ACTIVE_LOW)>;
+        dr-gpios = <&gpio0 22 (GPIO_ACTIVE_HIGH)>;
 
         sensitivity = "1x";
         sleep;
