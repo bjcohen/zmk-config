@@ -18,3 +18,7 @@
         relay-channel = <102>;
     };
 };
+
+&glidepoint_split {
+    device = <&glidepoint>;
+};

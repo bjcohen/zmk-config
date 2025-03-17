@@ -12,3 +12,7 @@
         device = <&glidepoint1>;
     };
 };
+
+&glidepoint_listener {
+    status = "okay";
+};
