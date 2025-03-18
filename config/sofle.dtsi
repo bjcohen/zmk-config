@@ -7,7 +7,6 @@
         dr-gpios = <&gpio0 22 (GPIO_ACTIVE_HIGH)>;
 
         sensitivity = "1x";
-        sleep;
     };
 
 };
