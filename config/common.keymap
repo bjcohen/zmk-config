@@ -1,0 +1,34 @@
+#include <dt-bindings/zmk/hid_usage_pages.h>
+
+#include "zmk-helpers/helper.h"
+
+#define GALLIUM 0
+#define QWERTY 1
+#define LOWER 2
+#define RAISE 3
+#define ADJUST 4
+
+#define MCTL (ZMK_HID_USAGE(HID_USAGE_CONSUMER, 0xc1))
+#define SPOT (ZMK_HID_USAGE(HID_USAGE_CONSUMER, 0x221))
+#define DICT (ZMK_HID_USAGE(HID_USAGE_CONSUMER, 0xcf))
+#define DND (ZMK_HID_USAGE(HID_USAGE_CONSUMER, 0x9b))
+
+ZMK_HOLD_TAP(hml,
+    flavor = "balanced";
+    tapping-term-ms = <280>;
+    quick-tap-ms = <175>;                // repeat on tap-into-hold
+    require-prior-idle-ms = <150>;
+    bindings = <&kp>, <&kp>;
+    hold-trigger-key-positions = <KEYS_R THUMBS>;
+    hold-trigger-on-release;             // delay positional check until key-release
+)
+
+ZMK_HOLD_TAP(hmr,
+    flavor = "balanced";
+    tapping-term-ms = <280>;
+    quick-tap-ms = <175>;                // repeat on tap-into-hold
+    require-prior-idle-ms = <150>;
+    bindings = <&kp>, <&kp>;
+    hold-trigger-key-positions = <KEYS_L THUMBS>;
+    hold-trigger-on-release;             // delay positional check until key-release
+)
