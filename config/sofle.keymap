@@ -116,7 +116,7 @@
             bindings = <
 &trans     &trans       &trans       &trans       &trans       &trans                        &trans    &trans    &trans    &trans    &trans  &trans
 &trans     &kp INS      &kp PSCRN    &kp K_CMENU  &trans       &trans                        &trans    &kp PG_DN &kp PG_UP &trans    &trans  &trans
-&trans     &kp LALT     &kp LCTRL    &kp LSHFT    &trans       &kp CLCK                      &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &kp DEL &kp BSPC
+&trans     &kp LALT     &kp LCTRL    &kp LSHFT    &trans       &caps_word                    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &kp DEL &kp BSPC
 &trans     &kp K_UNDO   &kp K_CUT    &kp K_COPY   &kp K_PASTE  &trans        &trans  &trans  &kp HOME  &trans    &trans    &kp END   &trans  &trans
                         &trans       &trans       &trans       &trans        &trans  &trans  &trans    &trans    &trans    &trans
             >;
