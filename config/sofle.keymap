@@ -146,8 +146,10 @@
 };
 
 &glidepoint_listener {
+    input-processors = <&zip_xy_scaler 3 2>;
+
     scroller {
-         layers = <LOWER>;
-         input-processors = <&zip_xy_to_scroll_mapper>;
+        layers = <LOWER>;
+        input-processors = <&zip_xy_to_scroll_mapper &zip_scroll_scaler 1 3>;
     };
 };
