@@ -97,8 +97,8 @@
 //               |     |     |     |     |        |  |       |      |       |       |      |
             bindings = <
 &trans    &trans          &trans       &trans         &trans           &trans                    &trans    &trans          &trans          &trans         &trans           &trans
-&kp GRAVE &kp CARET       &kp AMPS     &kp ASTRK      &kp LPAR         &kp RPAR                  &kp LT    &kp N7          &kp N8          &kp N9         &kp LBRC         &kp RBRC
-&kp COLON &hml LCTRL EXCL &hml LALT AT &hml LGUI HASH &hml LSHFT DLLR  &kp PRCNT                 &kp PLUS  &hmr RSHFT N4   &hmr RGUI N5    &hmr LALT N6   &hmr RCTRL LBKT  &kp RBKT
+&kp GRAVE &kp CARET       &kp AMPS     &kp ASTRK      &kp LPAR         &kp RPAR                  &kp LT    &kp N7          &kp N8          &kp N9         &kp LBKT         &kp RBKT
+&kp COLON &hml LCTRL EXCL &hml LALT AT &hml LGUI HASH &hml LSHFT DLLR  &kp PRCNT                 &kp PLUS  &hmr RSHFT N4   &hmr RGUI N5    &hmr LALT N6   &hmr RCTRL LBRC  &kp RBRC
 &kp SEMI  &kp EQUAL       &kp MINUS    &kp GT         &kp PIPE         &kp TILDE  &trans &trans  &kp N0    &kp N1          &kp N2          &kp N3         &kp BSLH         &trans
                           &trans       &trans         &trans           &trans     &trans &trans  &trans    &trans          &trans          &trans
             >;
@@ -115,11 +115,11 @@
 // |       |  F1  |  F2  |  F3  |  F12  |      |      |  |      | Home | PGDN |  PGUP | End  |       |       |
 //                |      |      |       |      |      |  |      |      |      |       |      |
             bindings = <
-&trans     &trans        &trans       &trans       &trans         &trans                        &trans    &trans          &trans       &trans          &trans         &trans
-&trans     &kp F7        &kp F8       &kp F9       &kp F10        &trans                        &K_REDO   &K_PASTE        &K_COPY      &K_CUT          &K_UNDO        &trans
-&trans     &hml LCTRL F4 &hml LALT F5 &hml LGUI F6 &hml LSHFT F11 &caps_word                    &kp LEFT  &hmr RSHFT DOWN &hmr RGUI UP &hmr LALT RIGHT &hmr RCTRL DEL &kp BSPC
-&trans     &kp F1        &kp F2       &kp F3       &kp F12        &trans        &trans  &trans  &kp HOME  &kp PG_DN       &kp PG_UP    &kp END         &trans         &trans
-                         &trans       &trans       &trans         &trans        &trans  &trans  &trans    &trans          &trans       &trans
+&trans     &trans        &trans       &trans       &trans         &trans                        &trans     &trans          &trans       &trans          &trans         &trans
+&trans     &kp F7        &kp F8       &kp F9       &kp F10        &trans                        &kp K_REDO &kp K_PASTE     &kp K_COPY   &kp K_CUT       &kp K_UNDO     &trans
+&trans     &hml LCTRL F4 &hml LALT F5 &hml LGUI F6 &hml LSHFT F11 &caps_word                    &kp LEFT   &hmr RSHFT DOWN &hmr RGUI UP &hmr LALT RIGHT &hmr RCTRL DEL &kp BSPC
+&trans     &kp F1        &kp F2       &kp F3       &kp F12        &trans        &trans  &trans  &kp HOME   &kp PG_DN       &kp PG_UP    &kp END         &trans         &trans
+                         &trans       &trans       &trans         &trans        &trans  &trans  &trans     &trans          &trans       &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
