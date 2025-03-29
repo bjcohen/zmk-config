@@ -98,8 +98,9 @@
             bindings = <
 &trans    &trans          &trans       &trans         &trans           &trans                    &trans    &trans          &trans          &trans         &trans           &trans
 &kp GRAVE &kp CARET       &kp AMPS     &kp ASTRK      &kp LPAR         &kp RPAR                  &kp LT    &kp N7          &kp N8          &kp N9         &kp LBRC         &kp RBRC
+
 &kp COLON &hml LCTRL EXCL &hml LALT AT &hml LGUI HASH &hml LSHFT DLLR  &kp PRCNT                 &kp PLUS  &hmr RSHFT N4   &hmr RGUI N5    &hmr LALT N6   &hmr RCTRL LBRK  &kp RBRK
-&trans    &kp EQUAL       &kp MINUS    &kp GT         &kp PIPE         &kp TILDE  &trans &trans  &kp N0    &kp N1          &kp N2          &kp N3         &kp BSLH         &trans
+&kp SEMI  &kp EQUAL       &kp MINUS    &kp GT         &kp PIPE         &kp TILDE  &trans &trans  &kp N0    &kp N1          &kp N2          &kp N3         &kp BSLH         &trans
                           &trans       &trans         &trans           &trans     &trans &trans  &trans    &trans          &trans          &trans
             >;
 
