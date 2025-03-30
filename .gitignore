@@ -1,3 +1,19 @@
 *.uf2
 .zmk/
 *.org
+
+# build dirs
+.cache/
+.west/
+build/
+
+# sources
+zmk/
+zephyr/
+!zephyr/module.yml
+modules/
+
+# modules
+cirque-input-module/
+zmk-helpers/
+zmk-nice-oled/
