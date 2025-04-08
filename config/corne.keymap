@@ -90,11 +90,11 @@
 // -----------------------------------------------------------------------------------------
 // |      |  F7 |  F8 |  F9 | F10 |     |   | Redo| Past| Copy| Cut | Undo|      |
 // |      |  F4 |  F5 |  F6 | F11 | CAPS|   | Left| Down|  Up | Rigt| DEL | BSPC |
-// |      |  F1 |  F2 |  F3 | F12 |     |   | Home| PgDn| PgUp| End |     |      |
+// |      |  F1 |  F2 |  F3 | F12 |     |   | Home| PgDn| PgUp| End | D   |      |
             bindings = <
    &trans     &kp F7 &kp F8 &kp F9 &kp F10 &trans      &kp K_REDO &kp K_PASTE &kp K_COPY &kp K_CUT &kp K_UNDO &trans
-   &trans     &kp F4 &kp F5 &kp F6 &kp F11 &caps_word  &kp LEFT   &kp DOWN    &kp UP     &kp RIGHT &kp DEL    &kp BSPC
-   &trans     &kp F1 &kp F2 &kp F3 &kp F12 &trans      &kp HOME   &kp PG_DN   &kp PG_UP  &kp END   &trans     &trans
+   &trans     &hml LCTRL F4 &hml LALT F5 &hml LGUI F6 &hml LSHFT F11 &caps_word  &kp LEFT   &hmr RSHFT DOWN &hmr RGUI UP &hmr RCTL RIGHT &hmr RCTRL DEL &kp BSPC
+   &trans     &kp F1 &kp F2 &kp F3 &kp F12 &trans      &kp HOME   &kp PG_DN   &kp PG_UP  &kp END   &kp D      &trans
                                  &trans &trans &trans  &trans &trans &trans
             >;
         };
