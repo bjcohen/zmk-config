@@ -8,6 +8,8 @@ manifest:
       url-base: https://github.com/urob
     - name: petejohanson
       url-base: https://github.com/petejohanson
+    - name: ssbb
+      url-base: https://github.com/ssbb
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -21,6 +23,9 @@ manifest:
       revision: main
     - name: cirque-input-module
       remote: petejohanson
+      revision: main
+    - name: zmk-listeners
+      remote: ssbb
       revision: main
   self:
     path: config
