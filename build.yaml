@@ -19,27 +19,27 @@
 #
 ---
 include:
-  - board: nice_nano@2.0.0
+  - board: nice_nano_v2
     shield: sofle_left nice_oled
     artifact-name: sofle_left
-  - board: nice_nano@2.0.0
+  - board: nice_nano_v2
     shield: sofle_right nice_oled
     artifact-name: sofle_right
-  - board: nice_nano@2.0.0
+  - board: nice_nano_v2
     shield: sofle_left nice_oled
     snippet: zmk-usb-logging
     cmake-args: -DCONFIG_LOG_PROCESS_THREAD_STARTUP_DELAY_MS=1000
     artifact-name: sofle_left_with_logging
-  - board: nice_nano@2.0.0
+  - board: nice_nano_v2
     shield: sofle_right nice_oled
     snippet: zmk-usb-logging
     cmake-args: -DCONFIG_LOG_PROCESS_THREAD_STARTUP_DELAY_MS=1000
     artifact-name: sofle_right_with_logging
-  - board: nice_nano@2.0.0
+  - board: nice_nano_v2
     shield: corne_left nice_oled
     artifact-name: corne_left
-  - board: nice_nano@2.0.0
+  - board: nice_nano_v2
     shield: corne_right nice_oled
     artifact-name: corne_right
-  - board: nice_nano@2.0.0
+  - board: nice_nano_v2
     shield: settings_reset
