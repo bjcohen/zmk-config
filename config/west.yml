@@ -21,9 +21,6 @@ manifest:
     - name: zmk-helpers
       remote: urob
       revision: main
-    - name: cirque-input-module
-      remote: petejohanson
-      revision: main
     - name: zmk-listeners
       remote: ssbb
       revision: main
