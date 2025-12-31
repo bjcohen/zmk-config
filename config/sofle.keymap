@@ -30,13 +30,13 @@
 // |  TAB  |  B  |  L  |  D   |  C   |  V   |                   |  J   |  Y    |  O    |  U   |   ,   | BKSPC |
 // |  ESC  |  N  |  R  |  T   |  S   |  G   |                   |  P   |  H    |  A    |  E   |   I   |   /   |
 // | SHIFT |  X  |  Q  |  M   |  W   |  Z   |  MUTE  |  |       |  K   |  F    |  '    |  ;   |   .   | SHIFT |
-//               | CTRL| ALT  | GUI  | LOWER|  ENTER |  | SPACE | RAISE| GUI   | ALT   | CTRL |
+//               | CTRL| ALT  | LOWER| ENTER|  ENTER |  | SPACE | SPACE| RAISE | ALT   | CTRL |
             bindings = <
-&kp GRAVE &kp N1       &kp N2      &kp N3      &kp N4       &kp N5                               &kp N6         &kp N7       &kp N8      &kp N9      &kp N0       &kp MINUS
-&kp TAB   &kp B        &kp L       &kp D       &kp C        &kp V                                &kp J          &kp Y        &kp O       &kp U       &kp COMMA    &kp BSPC
-&kp ESC   &hml LCTRL N &hml LALT R &hml LGUI T &hml LSHFT S &kp G                                &kp P          &hmr RSHFT H &hmr RGUI A &hmr LALT E &hmr RCTRL I &kp FSLH
-SC(LSHFT) &kp X        &kp Q       &kp M       &kp W        &kp Z          &kp C_MUTE &none      &kp K          &kp F        &kp SQT     &kp SEMI    &kp DOT      SC(RSHFT)
-                       &kp LCTRL   &kp LALT    &kp LGUI     MO_TOG(LOWER)  &kp RET    &kp SPACE  MO_TOG(RAISE)  &kp RGUI     &kp LALT    &kp RCTRL
+&kp GRAVE &kp N1       &kp N2      &kp N3      &kp N4        &kp N5                       &kp N6    &kp N7        &kp N8      &kp N9      &kp N0       &kp MINUS
+&kp TAB   &kp B        &kp L       &kp D       &kp C         &kp V                        &kp J     &kp Y         &kp O       &kp U       &kp COMMA    &kp BSPC
+&kp ESC   &hml LCTRL N &hml LALT R &hml LGUI T &hml LSHFT S  &kp G                        &kp P     &hmr RSHFT H  &hmr RGUI A &hmr LALT E &hmr RCTRL I &kp FSLH
+SC(LSHFT) &kp X        &kp Q       &kp M       &kp W         &kp Z   &kp C_MUTE &none     &kp K     &kp F         &kp SQT     &kp SEMI    &kp DOT      SC(RSHFT)
+                       &kp LCTRL   &kp LALT    MO_TOG(LOWER) &kp RET &kp RET    &kp SPACE &kp SPACE MO_TOG(RAISE) &kp LALT    &kp RCTRL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -49,13 +49,13 @@ SC(LSHFT) &kp X        &kp Q       &kp M       &kp W        &kp Z          &kp C
 // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | BKSPC |
 // |  ESC  |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
 // | SHIFT |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |       |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-//               | CTRL| ALT  | GUI  | LOWER|  ENTER |  | SPACE | RAISE| GUI   | ALT   | CTRL |
+//               | CTRL| ALT  | LOWER| ENTER|  ENTER |  | SPACE | SPACE| RAISE | ALT   | CTRL |
             bindings = <
-&kp GRAVE &kp N1       &kp N2      &kp N3      &kp N4       &kp N5                               &kp N6         &kp N7       &kp N8      &kp N9      &kp N0          &kp MINUS
-&kp TAB   &kp Q        &kp W       &kp E       &kp R        &kp T                                &kp Y          &kp U        &kp I       &kp O       &kp P           &kp BSPC
-&kp ESC   &hml LCTRL A &hml LALT S &hml LGUI D &hml LSHFT F &kp G                                &kp H          &hmr RSHFT J &hmr RGUI K &hmr LALT L &hmr RCTRL SEMI &kp SQT
-SC(LSHFT) &kp Z        &kp X       &kp C       &kp V        &kp B          &kp C_MUTE &none      &kp N          &kp M        &kp COMMA   &kp DOT     &kp FSLH        SC(RSHFT)
-                       &kp LCTRL   &kp LALT    &kp LGUI     MO_TOG(LOWER)  &kp RET    &kp SPACE  MO_TOG(RAISE)  &kp RGUI     &kp LALT    &kp RCTRL
+&kp GRAVE &kp N1       &kp N2      &kp N3      &kp N4        &kp N5                       &kp N6    &kp N7        &kp N8      &kp N9      &kp N0          &kp MINUS
+&kp TAB   &kp Q        &kp W       &kp E       &kp R         &kp T                        &kp Y     &kp U         &kp I       &kp O       &kp P           &kp BSPC
+&kp ESC   &hml LCTRL A &hml LALT S &hml LGUI D &hml LSHFT F  &kp G                        &kp H     &hmr RSHFT J  &hmr RGUI K &hmr LALT L &hmr RCTRL SEMI &kp SQT
+SC(LSHFT) &kp Z        &kp X       &kp C       &kp V         &kp B   &kp C_MUTE &none     &kp N     &kp M         &kp COMMA   &kp DOT     &kp FSLH        SC(RSHFT)
+                       &kp LCTRL   &kp LALT    MO_TOG(LOWER) &kp RET &kp RET    &kp SPACE &kp SPACE MO_TOG(RAISE) &kp LALT    &kp RCTRL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
