@@ -17,3 +17,4 @@ modules/
 cirque-input-module/
 zmk-helpers/
 zmk-nice-oled/
+zmk-listeners/
