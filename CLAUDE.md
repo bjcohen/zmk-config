@@ -43,6 +43,9 @@ uvx --with pyelftools west build -p always -s zmk/app -b nice_nano_v2 \
 uvx --with pyelftools west build -p always -s zmk/app -b nice_nano_v2 \
   -d build/corne_left \
   -- -DZMK_CONFIG=$(realpath config) -DSHIELD="corne_left nice_oled"
+
+Or, just use the just recipes:
+just b sofle_left
 ```
 
 Output firmware is at `build/zephyr/zmk.uf2`.
