@@ -3,7 +3,13 @@
     "allow": [
       "Bash(grep:*)",
       "Bash(wc:*)",
-      "WebFetch(domain:zmk.dev)"
+      "WebFetch(domain:zmk.dev)",
+      "Bash(gh pr:*)",
+      "WebSearch",
+      "WebFetch(domain:docs.zephyrproject.org)",
+      "WebFetch(domain:github.com)",
+      "Bash(uvx west update:*)",
+      "WebFetch(domain:docs.lvgl.io)"
     ]
   }
 }

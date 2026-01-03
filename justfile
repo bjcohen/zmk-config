@@ -20,7 +20,8 @@ build TARGET:
     board=$(yq '.include[] | select(.artifact-name == "{{ TARGET }}") | .board' -e {{ build_file }})
     shield=$(yq '.include[] | select(.artifact-name == "{{ TARGET }}") | .shield' -e {{ build_file }})
     cmake_args=$(yq '.include[] | select(.artifact-name == "{{ TARGET }}") | .cmake-args // ""' {{ build_file }})
-    uvx --with pyelftools west build -p always -s zmk/app -b "$board" -d build/{{ TARGET }} -- -DZMK_CONFIG=$(realpath config) -DSHIELD="$shield" $cmake_args
+    snippet=$(yq '.include[] | select(.artifact-name == "{{ TARGET }}") | .snippet // ""' {{ build_file }})
+    uvx --with pyelftools west build -p auto -s zmk/app -b "$board" -d build/{{ TARGET }} -S "$snippet" -- -DZMK_CONFIG=$(realpath config) -DSHIELD="$shield" $cmake_args
     cp build/sofle_left/zephyr/zmk.uf2 {{ TARGET }}.uf2
 
 flash TARGET: (build TARGET)

@@ -26,15 +26,19 @@
 #define EXTRA_ROW_ADJUST   &none &none &none &none &none &none            &none &none &none &none &none &none
 
 // Encoder column in bottom row
+// - ENCODER_L/R: key binding when encoder is pressed (tap)
+// - SENSOR_BINDINGS: rotation behavior (left encoder: volume, right encoder: page scroll)
 #define ENCODER_L  &kp C_MUTE
 #define ENCODER_R  &none
+#define SENSOR_BINDINGS  sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
 
 // Thumb clusters (5 keys per side)
-#define THUMB_BASE   &kp LCTRL &kp LALT MO_TOG(LOWER) &kp RET &kp RET     &kp SPACE &kp SPACE MO_TOG(RAISE) &kp RALT &kp RCTRL
+// Intentionally different from Corne: Sofle uses Ctrl/Alt on outer thumbs since the extra
+// keys allow dedicated modifier positions. Corne uses GUI on outer thumb due to fewer keys.
+// Duplicate RET/SPACE keys provide a larger "landing zone" for the most-used thumb keys,
+// reducing the need for precise finger placement.
+#define THUMB_BASE   &kp LCTRL &kp LALT &mo LOWER &kp RET MO_TOG(LOWER)   MO_TOG(RAISE) &kp SPACE &mo RAISE &kp RALT &kp RCTRL
 #define THUMB_TRANS  &trans &trans &trans &trans &trans                   &trans &trans &trans &trans &trans
-
-// Rotary encoder bindings
-#define SENSOR_BINDINGS  sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
 
 #include "common.keymap"
 
