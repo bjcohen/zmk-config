@@ -1,4 +1,5 @@
 alias b := build
+alias f := flash
 
 build_file := "build.yaml"
 
@@ -22,7 +23,7 @@ build TARGET:
     cmake_args=$(yq '.include[] | select(.artifact-name == "{{ TARGET }}") | .cmake-args // ""' {{ build_file }})
     snippet=$(yq '.include[] | select(.artifact-name == "{{ TARGET }}") | .snippet // ""' {{ build_file }})
     uvx --with pyelftools west build -p auto -s zmk/app -b "$board" -d build/{{ TARGET }} -S "$snippet" -- -DZMK_CONFIG=$(realpath config) -DSHIELD="$shield" $cmake_args
-    cp build/sofle_left/zephyr/zmk.uf2 {{ TARGET }}.uf2
+    cp build/{{ TARGET }}/zephyr/zmk.uf2 {{ TARGET }}.uf2
 
 flash TARGET: (build TARGET)
     cp {{ TARGET }}.uf2 /Volumes/NICENANO
